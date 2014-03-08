@@ -14,14 +14,14 @@ class TestApartmentScraper(unittest.TestCase):
 
     def testRead(self):
         testfile = scraper.read_search_results("testresults.html")
-        self.assertEqual(testfile[0], self.contents[0])
-        self.assertEqual(testfile[1], self.contents[1])
+        self.assertEqual(testfile, self.contents)
 
     def testParse(self):
-        pass
+        results = scraper.parse_source(*self.contents)
+        self.assertEqual(type(results), scraper.BeautifulSoup)
 
     def testExtract(self):
-        pass
+        self.assertEqual(type(scraper.extract_listings(scraper.parse_source(*self.contents))), list)
 
 if __name__ == "__main__":
     unittest.main()
