@@ -9,8 +9,10 @@ class TestApartmentScraper(unittest.TestCase):
         testfile.close()
 
     def testFetch(self):
-        contents = scraper.fetch_search_results(minAsk=500, maxAsk=1000, bedrooms=2)
-        self.assertEqual(contents[1], "utf-8")
+        #it is unethical to hit the craig's list website every time we test
+        #especially when we'll automate testing with travis
+        #that's why we use the testfile instead.
+        pass
 
     def testRead(self):
         testfile = scraper.read_search_results("testresults.html")
