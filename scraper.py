@@ -44,7 +44,7 @@ def extract_listings(parsed):
     return extracted
 
 if __name__ == '__main__':
-    import pprint                                  # add this import
+    import pprint
     if len(sys.argv) > 1 and sys.argv[1] == 'test':
         html, encoding = read_search_results()
     else:
