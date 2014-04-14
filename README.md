@@ -1,6 +1,8 @@
 souptests
 =========
 
+tutorial done through Code Fellows
+
 some simple functions to use BeautifulSoup 4 to ready craig's list search results.
 
 fetch_search_results takes parameters and sends a craigslist search, then returns the resulting page data and its character encoding.
